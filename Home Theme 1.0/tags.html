@@ -1,0 +1,31 @@
+%%Panel.HTMLHead%%
+    <body class="tags">
+        %%Panel.DrawerMenu%%
+        <div class="page">
+            %%Panel.Header%%
+            <div class="main">
+                <div class="inner">
+                    %%Panel.WrapperBanner%%
+					<div class="productlist-page">
+						<div class="Content Wide" id="LayoutColumn1">
+							%%Panel.Breadcrumb%%
+							%%Panel.ProductTagCloud%%
+							%%Panel.TagProducts%%
+						</div>
+					</div>
+					<div class="Left">
+						<h3>Categories</h3>
+						%%Panel.SideCategoryList%%
+					</div>					
+                    <div class="clear"></div>
+                </div>
+            </div>
+            %%Panel.Footer%%
+        </div>
+    </body>
+</html>
+<script>
+	$(document).ready(function(){
+		$('input[type=checkbox], select').not('.UniApplied').uniform()
+	});
+</script>

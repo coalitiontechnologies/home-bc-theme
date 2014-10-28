@@ -1,0 +1,252 @@
+// See the README for a guide on how to compile using LESS
+/*
+
+!!!!!!!!!! WARNING !!!!!!!!!!
+
+If you edit theme.css, your changes will be overwritten by any compilation of theme.less
+Please remember to replicate your changes in init.less, or just make your changes in another file if possible
+
+!!!!!!!!!! WARNING !!!!!!!!!!
+
+*/
+
+@color-border: #e3e3e3;
+/* @import "internal-variables.less"; */
+@import "style-editor-variables.less";
+/* @import "init.less"; */
+
+.header { background: @color-header-background; }
+.page { background: @color-page-background; }
+.SortBox, .AddToWishlistLink .wishlist-button, #currencyPhone span, #currencyPhone span a { color: @theme-color; }
+.TopMenu { color: @color-top-menu-text; background: @color-top-menu-background;}
+.TopMenu a { color: lighten(@color-top-menu-text,10%); }
+.TopMenu a:hover { color: lighten(@color-top-menu-text,5%); }
+.header-logo a { color: @color-store-name; }
+.PageMenu { background: @color-menu-background; }
+.PageMenu a { color: @color-menu-text; }
+.PageMenu li ul { background: @color-dropdown-background; }
+.PageMenu .menuHeading a,
+.PageMenu li ul li a { color: @color-dropdown-text; }
+.PageMenu li ul:before { border-color: transparent transparent @color-dropdown-background transparent; }
+.header .PageMenu .category-list > li:hover > a { text-shadow: 0px 0px 0 @color-menu-text, 0px 0px 0 @color-menu-text, 0px 0px 0 @color-menu-text, 0px 0px 0 @color-menu-text; color:@color-menu-text; }
+.PageMenu .category-list > li.hasChild:after { border-top: 5px solid @theme-color; }
+
+.footer-main { background: @color-footer-background; color: @color-footer-text; }
+.footer-main a,
+.f-newsletter .help p { color: @color-footer-text; }
+.footer-main h4,
+.newsletter-subscription h4 { color: @color-column-headings; }
+.footer-links { background: @color-footer-bar-background; color: @color-footer-bar-text; }
+.footer-links a:hover { color: lighten(@color-footer-bar-background, 25%); }
+.footer-links p,
+.footer-links a{ color:@color-footer-bar-text; }
+
+body,
+input, select, textarea,
+input.Textbox, input[type="text"],
+#SearchForm input,
+.HorizontalFormContainer dd .selector span,
+.fastCartTop div,
+.list-icon li { color: @color-page-text; }
+
+#ModalContent,
+.ModalContent,
+.CurrencyChooser a span { color: @color-page-text !important; }
+
+a,
+.Left li li a,
+.Left #SideCategoryList li a,
+.Left .slist li a,
+.Left .afterSideShopByBrand a,
+.Left #GiftCertificatesMenu li a,
+.Left #SideAccountMenu li a,
+.Left #SideCategoryList li li a,
+.Left .slist li li a,
+.TabNav li.Active a,
+.ModalContent h4 a:hover,
+.footer a:hover { color: @color-page-text; }
+
+.btn,
+.facet-container .facet-form .btn,
+.CartLink a{
+	background-color: @theme-color;
+	color: lighten(@theme-color, 100%);
+	border-bottom: 3px solid darken(@theme-color, 10.4%);
+}
+.btn:hover,
+.facet-container .facet-form .btn:hover{ background-color: darken(@theme-color, 10.4%); }
+
+.CartLink a:hover { color: lighten(@theme-color, 100%); background-color: darken(@theme-color, 8%); }
+.CartLink a:hover .cicon { background-color: @theme-color; }
+.CartLink a .cicon{ background-color: darken(@theme-color, 7%); border-bottom: 3px solid darken(@theme-color, 9%); }
+
+.header .category-list a.sale{ color: @theme-color; }
+.header .PageMenu .category-list > li:hover > a.sale{ color: darken(@theme-color, 10.4%); text-shadow:0 0 0 darken(@theme-color, 10.4%),0 0 0 darken(@theme-color, 10.4%),0 0 0 darken(@theme-color, 10.4%),0 0 0 darken(@theme-color, 10.4%); }
+
+.page-content #LayoutColumn2 a.pname,
+#ModalContent a,
+.ModalContent a,
+.recaptchatable a { color: @color-page-text !important; }
+.Left li a.active:hover{ border-color: @color-page-text; }
+.icon-add:hover { background-color: @color-page-text !important; }
+.multiStep li a { color: lighten(@color-page-text, 25%); }
+.Left li a.active,
+a:hover,
+a.alt, p a, a.NextLink,
+.currency-converter p span,
+.BlockContent.PageContent a,
+.page-content #LayoutColumn2 a,
+.Left #SideCategoryList li a:hover,
+.Left .slist li a:hover,
+.Left .afterSideShopByBrand a:hover,
+.Left #GiftCertificatesMenu li a:hover,
+.Left #SideAccountMenu li a:hover,
+.PageMenu li ul li a:hover,
+.Breadcrumb li a { color: @color-page-text; }
+
+.recaptchatable a:hover,
+.page-content #LayoutColumn2 a.pname:hover,
+#ModalContent a:hover,
+.ModalContent a:hover,
+.Breadcrumb li a:hover { color: @color-page-text !important; }
+a.alt:hover { background-color: @color-page-text; color: lighten(@color-page-text,100%); }
+.multiStep li.ActivePage h4 { border-bottom: 4px solid @color-page-text; }
+.icon-add { background: @color-page-text url("../images/add.png") no-repeat scroll 50% 50%; }
+
+.PrimaryProductDetails h1 { color: @color-product-name; }
+
+
+
+
+
+
+
+
+#HomeFeaturedProducts h3,
+#SideTopSellers h3,
+#HomeNewProducts h3,
+#SimilarProductsByCustomerViews h3 { color: @color-product-list-headings; }
+
+.ProductAddToCart .BulkDiscount .AddCartButton{
+	background-color: @color-add-to-cart-button;
+	border-bottom: 3px solid darken(@color-add-to-cart-button, 10.4%);
+}
+.ProductAddToCart .BulkDiscount .DetailRow:before{
+	background-color: darken(@color-add-to-cart-button, 10.4%);
+	border-bottom: 3px solid darken(@color-add-to-cart-button, 12%);
+}
+.ProductAddToCart .BulkDiscount .DetailRow:hover:before{ background-color: darken(@color-add-to-cart-button, 12%); }
+.ProductAddToCart .BulkDiscount .AddCartButton:hover{ background-color: darken(@color-add-to-cart-button, 10.4%); }
+
+#tabs-wrapper a.current {
+	background-color: @theme-color;
+	color: lighten(@theme-color, 100%);;
+	border-color: @theme-color;
+}
+
+.addto #SideProductAddToWishList input { color: @color-add-to-wishlist-button; border-bottom: 1px solid @color-add-to-wishlist-button; }
+#ProductDescription .subtitle, .ProductDescriptionContainer, .ProductDescriptionContainer p, .ProductDescriptionContainer a, .ProductDescriptionContainer li{ color: @color-product-description-titles; }
+
+#HomeFeaturedProducts .btn,
+#SideTopSellers .btn,
+#HomeNewProducts .btn{
+	background-color: @color-buttons;
+	color: lighten(@color-buttons, 100%);
+	border-bottom: 3px solid darken(@color-buttons, 10.4%);
+}
+#HomeFeaturedProducts .btn:hover,
+#SideTopSellers .btn:hover,
+#HomeNewProducts .btn:hover{ background-color: darken(@color-buttons, 10.4%); }	
+
+#CategoryContent .ProductList .pname,
+#CategoryContent .ProductList .p-name a,
+#SideProductRelated .pname,
+#SimilarProductsByCustomerViews .pname,
+#TagProducts .TaggedProductsList .pname{ color: @color-product-names; }
+
+#CategoryContent .ProductList .ProductActionAdd .btn,
+#fastCartWrapper .ProductList .ProductActionAdd .btn,
+.TaggedProductsList .ProductActionAdd .btn,
+.SearchContainer .ProductActionAdd .btn{
+	background-color: @color-buttons;
+	color: lighten(@color-buttons, 100%);
+	border-bottom: 3px solid darken(@color-buttons, 10.4%);
+}
+
+#CategoryContent .ProductList .ProductActionAdd .btn:hover,
+#fastCartWrapper .ProductList .ProductActionAdd .btn:hover,
+.TaggedProductsList .ProductActionAdd .btn:hover,
+.SearchContainer .ProductActionAdd .btn:hover{ background-color: darken(@color-buttons, 10.4%); }
+
+
+
+
+
+
+
+
+
+.productOptionViewProductPickListWithImage td { border-bottom: 1px dotted @color-border; }
+.TopMenu li.Flag img.Selected { border: 2px solid @color-border; }
+.productOptionViewRectangle .option.selectedValue label { border: 1px solid darken(@color-border,20%) !important; }
+
+.productOptionPickListSwatch .textureContainer,
+.productOptionPickListSwatch .swatchColours,
+.productOptionViewRectangle .option label,
+.recaptchatable #recaptcha_response_field,
+.zoomWrapper,
+#ProductDetails .ProductTinyImageList ul li.selected { border: solid !important; }
+
+/*
+.CurrencyList dd,
+#SearchForm .Button,
+#SearchForm input.Textbox,
+select,
+hr,
+input.Textbox, textarea,
+input[type="text"],
+input[type="password"],
+.QuickSearch,
+.SharePublicWishList,
+.ExpressCheckoutBlock .ExpressCheckoutTitle,
+.TabNav li a,
+.HowToPay,
+.NotifyMessage,
+.QuickSearchResult .QuickSearchResultImage,
+.CurrencyChooser,
+.selected-currency,
+div.uploader,
+div.selector,
+.recaptchatable { border-style: solid; } 
+
+.ExpressCheckoutBlockCompleted .ExpressCheckoutCompletedContent,
+div.uploader span.action { border-left: solid; } 
+*/
+
+.ProductList .pname { color: @color-product-names; }
+.ProductList .p-price { color: @color-product-prices; }
+
+
+#prodAccordion .subtitle { color: @color-product-description-titles; }
+
+/* --- Responsive --- */
+/* 768px */
+@media screen and (max-width: 768px) {
+    .TabNav li.Active a { border-bottom: solid; }
+}
+
+/* 600px */
+@media screen and (max-width: 600px) {
+    .BillingDetails, .ShippingDetails { border-top: solid; }
+}
+
+/* 480px */
+@media screen and (max-width: 480px) {
+    #cart-amount .Cart .total {
+        background: @theme-color;
+        color: lighten(@theme-color, 100%);
+    }
+    #cart-amount .Cart .bag-handle {
+        border: 2px solid @theme-color;
+    }
+}

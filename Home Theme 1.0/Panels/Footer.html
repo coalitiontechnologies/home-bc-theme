@@ -1,0 +1,60 @@
+<div class="footer">
+
+        <div class="footer-main">
+            <div class="inner">
+                <div class="footer-columns grid">
+                    <div class="grid__item f-pages">%%Panel.PagesMenu%%</div>
+                    <div class="grid__item f-cat">%%Panel.FooterCategoryList%%</div>
+                    <div class="grid__item socialize">%%Panel.SocialLinks%%</div>
+                    <div class="grid__item f-newsletter">
+                        <div class="clearfix">
+                        %%Panel.SideNewsletterBox%%
+                        </div>
+                        
+                        <div class="help">
+                            <h4>Need Help?</h4>
+                            <p>%%GLOBAL_StorePhoneNumber%% <a href="mailto:info@bigcommerce.com" class="contact-email">info@bigcommerce.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="inner">
+                <p id="payment"><img src="/templates/__custom/images/payments.png" /></p>
+                <p>Copyright &copy; %%GLOBAL_Year%% %%GLOBAL_StoreName%%. All Right Reserved. <a href="http://coalitiontechnologies.com" target="_blank">Coalition Technologies</a></p>
+                %%GLOBAL_DebugDetails%%
+            </div>
+        </div>
+
+</div>
+
+
+
+<script>
+$(document).ready(function(){
+  /* Display Phone Number Outside topMenu */
+  $phone = '<a href="tel:'+ $('#phonenumber').text() +'" >'+$('#phonenumber').text()+'</a>';
+  $('input[type=checkbox], input[type=radio], select').not('.UniApplied').uniform();  
+  $('#phoneNumberClone').html($phone);
+  if($('.header .category-list').length > 0){
+    $('.header .category-list > li').each(function(){
+      if($(this).children('ul').length > 0){
+        $(this).addClass('hasChild');
+        $(this).children('ul').prepend('<li class="menuHeading"><a href="'+$(this).children('a').attr('href')+'">All '+$(this).children('a').text()+' Products</a></li>');
+      }
+      if($(this).children('a').text().toLowerCase() == 'sale'){ $(this).children('a').addClass('sale'); }
+    });
+  }    
+});
+</script>
+%%GLOBAL_DesignModeHTML%%
+%%GLOBAL_QueryList%%
+%%GLOBAL_DesignModeScriptTag%%
+%%GLOBAL_LiveChatFooterCode%%
+%%GLOBAL_OptimizerTrackingScript%%
+%%GLOBAL_OptimizerConversionScript%%
+%%GLOBAL_OptimizerSetCookieScript%%
+%%GLOBAL_FooterScripts%%
+%%SNIPPET_FastCartThickBoxJs%%

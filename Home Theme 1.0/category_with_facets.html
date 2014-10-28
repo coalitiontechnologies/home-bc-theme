@@ -1,0 +1,73 @@
+%%Panel.HTMLHead%%
+<body class="category">
+    %%Panel.DrawerMenu%%
+    <div class="page">
+        %%Panel.Header%%
+        <div class="main">
+            <div class="inner">
+                %%Panel.WrapperBanner%%
+                %%Banner.TopBanner%%                         
+                <div class="productlist-page">
+                    %%Panel.CategoryBreadcrumb%%   
+                    <div class="headingSort clearfix">
+                        %%SNIPPET_CategorySortBox%%
+                        %%GLOBAL_CategoryNameOptimizerScriptTag%%
+                        <h1 class="TitleHeading">%%GLOBAL_CatName%%</h1>
+                        %%GLOBAL_CategoryNameOptimizerNoScriptTag%%
+                    </div>
+                    
+                    <div class="Content Wide %%GLOBAL_ExtraCategoryClass%%" id="LayoutColumn1">
+                        <div class="product-nav">
+                            %%SNIPPET_SubCategories%%
+                            %%Panel.SubCategoriesMobileMenu%%
+                            <div class="clear"></div>
+                        </div>
+                        %%Panel.CategoryContent%%
+                        %%Panel.CategoryHeading%%                        
+                    </div>
+                </div>
+                <div class="Left fleft js-faceted-search-column">
+                    %%Panel.SideCategoryList%%
+					%%Panel.FacetedSearch%%
+                </div>
+                <div class="clear"></div>
+                %%Banner.BottomBanner%%                    
+            </div>
+        </div>
+        %%Panel.Footer%%
+    </div>
+    <script>
+    $(document).ready(function(){
+        
+    var path = location;
+    var path1 = location.pathname;
+        $('.Left #SideCategoryList a').each(function(){
+        var currentLink = $(this).attr('href');
+        if(currentLink == path || currentLink == path1) {
+            $('.Left #SideCategoryList li').removeClass('active');
+        $(this).parent('li').addClass('active');
+        }
+    }); 
+        
+     $('.Left #SideCategoryList li').each(function(){
+    
+        if($(this).hasClass('active')){  
+        $(this).parent('ul').addClass('parentActiveUl');
+        $(this).parent('ul').parent('li').addClass('parentActiveLi');
+        
+        $(this).parent('ul').parent('li').parent('ul').addClass('tParentActiveUl');
+        $(this).parent('ul').parent('li').parent('ul').parent('li').addClass('tParentActiveLi');
+        
+        $(this).parent('ul').parent('li').parent('ul').parent('li').parent('ul').addClass('fParentActiveUl');
+        $(this).parent('ul').parent('li').parent('ul').parent('li').parent('ul').parent('li').addClass('fParentActiveLi');
+        
+        $(this).children('ul').addClass('activeChild');
+        $(this).children('ul').children('li').addClass('activeChildLi');
+      }
+    
+    });    
+        
+    });
+    </script>
+</body>
+</html>

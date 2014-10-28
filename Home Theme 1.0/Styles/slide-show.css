@@ -1,0 +1,62 @@
+.flexslider {
+    position: relative;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+}
+
+.slide-show h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 44px;
+    font-weight: 300;
+    line-height:1;
+    padding-bottom:0;
+    text-align:left;
+}
+
+.slide-show li.slide {
+    position: relative;
+}
+
+.slide-show .slide-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 64px;
+    font-weight: 300;
+    line-height:1;
+    margin-bottom:0;
+    text-align:left;
+}
+
+
+.flex-control-nav {
+    bottom: 20px !important;
+    display:none;
+}
+
+.slide-show .slide-overlay {
+    position: absolute;
+    left: 18%;
+    right: 20%;
+    top: 30%;
+}
+.slide-button span{
+  margin-top: 13px;
+  font-size: 15px;
+  text-transform: uppercase;
+  background: #fff;
+  color:#900;
+  font-weight: 600;
+  font-family: 'Open Sans', san-serif;
+  display: inline-block;
+  padding: 10px 27px;
+  border-bottom: 3px solid #a7d4c4;
+}
+.slide-button span:hover{ background-color: #fff; }
+.flex-direction-nav .flex-next {
+    background-position: 100% 0;
+    right: 25px;
+}
+
+.flex-direction-nav .flex-prev {
+    left: 25px;
+}
